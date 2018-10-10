@@ -1,5 +1,0 @@
-.gradle
-.DS_Store
-.idea
-target/surefire-reports
-target/maven-status
