@@ -1,8 +1,14 @@
 # spring-boot-cors-example
 
 Steps:
-1. Open command Terminal 1: ```shell $./gradlew clean build -x test && java -jar build/libs/gs-rest-service-cors-0.1.0.jar```
-2. On Terminal 2: ```shell $./mvnw clean install -DskipTest test; mvn spring-boot:run -Dserver.port=9000```
+1. Open command Terminal 1: 
+```shell
+$./gradlew clean build -x test && java -jar build/libs/gs-rest-service-cors-0.1.0.jar 
+```
+2. On Terminal 2: 
+```shell 
+$./mvnw clean install -DskipTest test; mvn spring-boot:run -Dserver.port=9000
+```
 3. open http://localhost:9000/
 4. open debugger window at "http://localhost:9000/" and execute following js 
 
