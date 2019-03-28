@@ -1,4 +1,4 @@
-# spring-boot-cors-example
+# spring-boot-cors-example [![forthebadge](https://forthebadge.com/images/badges/made-with-java.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
 Steps:
 1. Open command Terminal 1: 
