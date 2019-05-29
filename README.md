@@ -1,5 +1,10 @@
 # spring-boot-cors-example [![forthebadge](https://forthebadge.com/images/badges/made-with-java.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
+Your domain is http://localhost:9000/, you are trying yo connect to another service hosted at http://localhost:8080/greeting.  
+So for [service:8080](http://localhost:8080/greeting) request originated from another domain, so this is the case of CORS.
+
+
+
 Steps:
 1. Open command Terminal 1: 
 ```shell
