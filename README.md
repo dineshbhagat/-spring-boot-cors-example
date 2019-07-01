@@ -64,11 +64,11 @@ We can test this using postman by passing header "Origin"
 
 Origin: http://localhost:9000
 
-Then send the request
+Then send the request OPTION/GET/POST
 
 This will result in `Invalid CORS request`
 
-curl -X OPTIONS \
+curl -X GET \
   http://localhost:8080/greeting \
   -H 'Accept: */*' \
   -H 'Access-Control-Request-Method: GET' \
@@ -83,7 +83,7 @@ curl -X OPTIONS \
   
 But this will result in success:
 
-curl -X OPTIONS \
+curl -X GET \
   http://localhost:8080/greeting \
   -H 'Accept: */*' \
   -H 'Access-Control-Request-Method: GET' \
