@@ -59,7 +59,12 @@ xhr.send();
 <img width="1668" alt="screen shot 2018-10-09 at 4 51 08 pm" src="https://media.git.target.com/user/12476/files/da9d4904-cbe3-11e8-8f01-153199c5904d">
 <img width="1675" alt="screen shot 2018-10-09 at 4 51 20 pm" src="https://media.git.target.com/user/12476/files/d4b68ec4-cbe3-11e8-8372-c92f8e0f5a78">
 
+OR
+We can test this using postman by passing header "Origin"
 
+Origin: http://localhost:9000
+
+Then send the request
 
 Refs:
 
