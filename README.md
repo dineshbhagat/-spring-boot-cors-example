@@ -66,6 +66,37 @@ Origin: http://localhost:9000
 
 Then send the request
 
+This will result in `Invalid CORS request`
+
+curl -X OPTIONS \
+  http://localhost:8080/greeting \
+  -H 'Accept: */*' \
+  -H 'Access-Control-Request-Method: GET' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Host: localhost:8080' \
+  -H 'Origin: http://localhost:30840' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'cache-control: no-cache' \
+  -H 'content-length: '
+  
+  
+But this will result in success:
+
+curl -X OPTIONS \
+  http://localhost:8080/greeting \
+  -H 'Accept: */*' \
+  -H 'Access-Control-Request-Method: GET' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Host: localhost:8080' \
+  -H 'Origin: http://localhost:9000' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'cache-control: no-cache' \
+  -H 'content-length: '
+  
+  
+  
 Refs:
 
 https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
