@@ -110,6 +110,7 @@ Then send the request OPTION/GET/POST
 
 This will result in `Invalid CORS request`
 
+```shell
 curl -X GET \
   http://localhost:8080/greeting \
   -H 'Accept: */*' \
@@ -121,10 +122,11 @@ curl -X GET \
   -H 'accept-encoding: gzip, deflate' \
   -H 'cache-control: no-cache' \
   -H 'content-length: '
-  
+```  
   
 But this will result in success:
 
+```shell
 curl -X GET \
   http://localhost:8080/greeting \
   -H 'Accept: */*' \
@@ -136,7 +138,7 @@ curl -X GET \
   -H 'accept-encoding: gzip, deflate' \
   -H 'cache-control: no-cache' \
   -H 'content-length: '
-  
+```  
   
   
 Refs:
