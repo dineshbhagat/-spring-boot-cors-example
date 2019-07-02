@@ -53,6 +53,48 @@ xhr.onerror = function() {
 
 xhr.send();
 ```
+
+OR 
+POST call
+
+```javascript
+var createCORSRequest = function(method, url) {
+  var xhr = new XMLHttpRequest();
+  if ("withCredentials" in xhr) {
+    // Most browsers.
+    xhr.open(method, url, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+  } else if (typeof XDomainRequest != "undefined") {
+    // IE8 & IE9
+    xhr = new XDomainRequest();
+    xhr.open(method, url);
+  } else {
+    // CORS not supported.
+    xhr = null;
+  }
+  return xhr;
+};
+
+var url = 'http://localhost:8080/add';
+var method = 'POST';
+var xhr = createCORSRequest(method, url);
+
+xhr.onload = function() {
+  var v = xhr.responseText;
+  console.log(xhr.responseText);
+  $('.greeting-id').append(v.id);
+  $('.greeting-content').append(v.content);
+  console.log("success");
+};
+
+xhr.onerror = function() {
+  console.log("error");
+};
+
+var data=JSON.stringify({"a":"b"})
+//add body data here
+xhr.send(data);
+```
 5. Check network tab on debugger, we can see OPTIONS and GET calls
 6. step 2-5 can be done for any other port(here 9000)
 
