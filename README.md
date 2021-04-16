@@ -115,6 +115,9 @@ xhr.send(data);
 <img width="1668" alt="screen shot 2018-10-09 at 4 51 08 pm" src="https://media.git.target.com/user/12476/files/da9d4904-cbe3-11e8-8f01-153199c5904d">
 <img width="1675" alt="screen shot 2018-10-09 at 4 51 20 pm" src="https://media.git.target.com/user/12476/files/d4b68ec4-cbe3-11e8-8372-c92f8e0f5a78">
 
+Post call
+<img width="1676" alt="Screenshot 2021-04-16 at 2 27 29 PM" src="https://user-images.githubusercontent.com/3823705/115002022-e4d56880-9ec1-11eb-8316-1f9ff8fefe24.png">
+
 OR
 We can test this using postman by passing header "Origin"
 
