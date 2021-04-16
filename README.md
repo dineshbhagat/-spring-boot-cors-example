@@ -1,12 +1,26 @@
 # spring-boot-cors-example [![forthebadge](https://forthebadge.com/images/badges/made-with-java.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
-Your domain is http://localhost:9000/, you are trying to connect to another service hosted at http://localhost:8080/greeting.  
-So for [service:8080](http://localhost:8080/greeting) request originated from another domain, so this is the case of CORS.
+CORS stands for Cross-Origin Resource Sharing
+
+CORS is a security mechanism built into (all) modern web-browsers (yes! into your web browser! That’s why your curl calls works fine). It basically blocks all the http requests from your front end to any API that is not in the same “Origin” (domain, protocol, and port—which is the case most of the time).
+
+CORS is a mechanism built into web browser. It’s not a UI code issue
+To fix CORS problems, you need to make changes on the API side.
+
+UI domain: http://localhost:9000/  
+
+Backend Domain: http://localhost:8080/ --> Backend enables all the requests from UI domain.  
+
+UI is trying to connect to backend service hosted at http://localhost:8080/greeting.    
+
+So for browser, request is made to the domain different(i.e. localhost:8080/greeting) from that of its own domain (i.e. http://localhost:9000/)   
+So browser protects itself from such requests by blocking it.
+
 
 
 
 Steps:
-1. Open command Terminal 1: 
+1. Open command Terminal 1(or run in IDE): 
 ```shell
 $./gradlew clean build -x test && java -jar build/libs/gs-rest-service-cors-0.1.0.jar 
 ```
@@ -146,3 +160,6 @@ Refs:
 https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
 
 https://spring.io/guides/gs/rest-service-cors/#initial
+
+https://blog.container-solutions.com/a-guide-to-solving-those-mystifying-cors-issues
+
